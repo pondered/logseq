@@ -16,13 +16,13 @@
 				- 在存储数据是，以逗号分隔各个数据项
 			- FEDERATED
 				- 用来访问远程表
-			- InnoDB
+			- [[InnoDB]]
 				- 具备外键支持功能的事物存储引擎
 			- MEMORY
 				- 置于内存的表
 			- MERGE
 				- 用来管理多个MyISAM表构成的表集合
-			- MyISAM
+			- [[MyISAM]]
 				- 主要的非事物处理存储引擎
 			- NDB
-				-
+				- MySQL集群专用存储引擎
