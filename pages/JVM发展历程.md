@@ -27,4 +27,31 @@
 	- 2002年从Appeal Virtual Machine公司收购获得
 	- 2007年EBA 被Oracle收购
 	- 专门为服务器硬件和服务端应用场景高度优化的虚拟机
+	- 不太关注于程序的启动速度，全部代码都靠即时编译器编译后执行
 - IBM J9
+	- 开始名称是 IBM Technology for Java Virtual Machine 简称 IT4J
+	- 最初由IBM Ottawa实验室的一个SmallTalk虚拟机项目扩展而来
+	- 在设计上全面考虑服务端、桌面应用再到嵌入式的多用途虚拟机
+- BEA Liquid VM
+- Azul VM
+- Apache Harmony
+- Google Android Dalvik VM
+- Microsoft JVM
+- KVM
+	- 强调简单、轻量、高度可移植性，但是运行速度较慢
+- Java Card VM
+- Squawk VM
+- JavaInJava
+- Maxine VM
+- Jikes RVM
+- IKVM.NET
+- JamVM
+- CacaoVM
+- SableVM
+- Kaffe
+- JelatineJVM
+- NanoVM
+- MRP
+- MoxieJVM
+- [[GraalVM]]
+-
