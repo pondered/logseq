@@ -1,0 +1,13 @@
+- 目前Gradle支持的依赖配置有:`implementation`、`api`、`complieOnly`、`runtimeOnly`和`annotationProcessor`，已经废弃的有:`compile`、`provided`、`apk`、`providedCompile`
+	- implementation
+		- 和 `compile` 对应，会添加到编译路径，并且会将依赖打包输出，但是在编译时不会将依赖的实现暴露给其他module，也就是只有在运行时其他module才能访问这个依赖中的实现
+	- api
+		- 和 `compile` 功能完全一样，会添加依赖到编译路径，并且会将依赖打包输出，但是和 `implementation` 不同的是，这个依赖可以传递，其他module无论在编译时和运行时都可以访问到这个依赖的实现
+		- 和 `implementation` 的区别
+			- `implementation`的依赖层级只有两级，即: `A implementation/api B implementation C`，B可以使用C的方法，但是A不行，如果是 B api C，那么A也可以调用C的方法
+	- complieOnly
+		- 和 `provided`对应，`Gradle`把依赖添加到编译路径，编译时使用，不会打包输出，可以减少输出的体积，只在编译时需要
+	- runtimeOnly
+		- 和`apk`对应，运行时使用，但不会添加到编译路径
+	- annotationProcessor
+		- 用于注解处理器的依赖配置

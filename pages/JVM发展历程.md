@@ -1,0 +1,23 @@
+- Sun Classic VM
+	- Java1.0 发布，是世界上第一款商用Java虚拟机，Java1.4时淘汰
+	- 虚拟机内部只提供解释器
+	- 需要外挂JIT，但是一旦使用外挂JIT，JIT就会接管虚拟机的执行系统。解释器就不再工作
+- Exact VM
+	- 具备现代高性能虚拟机雏形
+		- 热点探测
+		- 两级即时编译器
+		- 编译器与解释器混合工作模式
+	- 准确式内存管理（Exact Memory Management)
+	  id:: 63fdc051-37ea-42ba-b76b-d5c27e5273f4
+		- 也叫 Non-ConServative/Accurate Memory Management
+		- 指虚拟机可以知道内存中某个位置的数据具体是什么类型
+- HotSpot VM
+	- 历史
+		- 由 Longview Technologies 公司设计
+		- 1997年该被Sun公司收购
+		- 来源于 Strongtalk 虚拟机
+		- JDK1.3时成为默认虚拟机
+	- 优点
+		- ((63fdc051-37ea-42ba-b76b-d5c27e5273f4))
+		- 热点代码探测技术
+			- 如果一个方法被频繁调用或方法中有效循环次数很多，将会分别触发标准即时编译和栈上替换编译（On-Stack Replacement，OSR）行为
