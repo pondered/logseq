@@ -1,0 +1,15 @@
+- DDD（Domain Drive Design，领域驱动设计）
+- 概念
+	- 是一种软件设计方法，是指在软件设计的过程中始终围绕领域来构建模型
+- 分层
+	- Interfaces
+		- 用户界面层也叫呈现层/前端
+	- Application
+		- 应用层
+		- 负责给用户界面提供业务应用的业务逻辑
+	- Domain
+		- 领域层
+		- 负责某个核心领域的具体业务逻辑
+	- Infrastructure
+		- 基础设施层
+		- 比如 MQ、[[MySQL]]、[[Redis]]等
