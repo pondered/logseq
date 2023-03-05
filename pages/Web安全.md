@@ -1,0 +1,16 @@
+- OWASP Top 10
+	- 全称
+	  collapsed:: true
+		- Open Web Application Security Project
+		- 开放式Web应用安全项目
+	- 主要安全风险
+		- 注入
+		- 失效身份验证和会话管理
+		- 敏感信息泄漏
+		- XML外部实体注入攻击(XXE)
+		- 存取控制终端
+		- 安全性错误配置
+		- 跨站脚本攻击(XSS)
+		- 不安全的反序列化
+		- 使用具有已知漏洞的组件
+		-
