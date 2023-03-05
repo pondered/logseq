@@ -242,7 +242,7 @@
  :ref/linked-references-collapsed-threshold 50
 
  ;; Favorites to list on the left sidebar
- :favorites ["从根儿上理解mysql"]
+ :favorites ["640433e3-ee42-49bc-a69d-37e766e1b54e" "从根儿上理解mysql"]
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
  ;; :srs/learning-fraction 0.5
