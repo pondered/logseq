@@ -2,6 +2,7 @@
 - 概念
 	- 是一种软件设计方法，是指在软件设计的过程中始终围绕领域来构建模型
 - 分层
+  collapsed:: true
 	- Interfaces
 		- 用户界面层也叫呈现层/前端
 	- Application
