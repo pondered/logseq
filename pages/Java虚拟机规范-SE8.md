@@ -90,7 +90,7 @@ public:: true
 			- 当所需的堆超过了自动内存管理系统能提供的最大容量
 				- 抛出 `OutOfMemoryError` 异常
 		- 方法区
-			-
+			- 供各个线程的运行时内存区域
 	- 栈帧
 -
 - [^heap]: Stack、Heap和Java(VM) Stack、Java Heap是不同的概念，程序分配在Java Stack 中的数据，从实现虚拟机的程序角度看可能是分配在Heap中
