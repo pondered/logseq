@@ -414,4 +414,4 @@
  :file/name-format :triple-lowbar
  :editor/logical-outdenting? false
  :graph/settings {:builtin-pages? true
- :excluded-pages? true}}
+ :excluded-pages? false}}
