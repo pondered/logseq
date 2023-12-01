@@ -10,6 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: logseq/publish-spa@v0.3.0
+        with:
+          # graph-directory: .
+          # output-directory: www
+          version: 0.10.0
+          theme-mode: dark
       - name: Add a nojekyll file # to make sure asset paths are correctly identified
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: Deploy 🚀
