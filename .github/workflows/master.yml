@@ -1,7 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
-
+# name: CI
 # Controls when the workflow will run
 # on:
 #   push:
@@ -34,9 +33,11 @@ name: CI
 #           folder: www # The folder the action should deploy.
 #           clean: true
 #           single-commit: true
-on: [push]
-  push:
-    branches: [logseq]
+
+name: CI
+  on: [push]
+    push:
+      branches: [logseq]
 
 
 permissions:
