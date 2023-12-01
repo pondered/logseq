@@ -15,7 +15,7 @@ jobs:
       - uses: logseq/publish-spa@v0.3.0
         with:
           # graph-directory: .
-          output-directory: .
+          output-directory: www
           version: 0.10.0
           theme-mode: dark
           accent-color: brown
