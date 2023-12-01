@@ -15,6 +15,7 @@ jobs:
           # output-directory: www
           version: 0.10.0
           theme-mode: dark
+          accent-color: brown
       - name: Add a nojekyll file # to make sure asset paths are correctly identified
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: Deploy 🚀
