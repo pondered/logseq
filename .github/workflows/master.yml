@@ -35,9 +35,9 @@
 #           single-commit: true
 
 name: CI
-  on: [push]
-    push:
-      branches: [logseq]
+on: [push]
+  push:
+    branches: [logseq]
 
 
 permissions:
