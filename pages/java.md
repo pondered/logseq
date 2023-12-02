@@ -1,5 +1,5 @@
 - 框架 #框架
-	- [[spring framework]]
+	- [[Spring Framework]]
 - 工具
 	-
 - [[JVM]]
