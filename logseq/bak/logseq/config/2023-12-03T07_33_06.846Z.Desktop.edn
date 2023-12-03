@@ -292,7 +292,7 @@
  ;;  :journal?        false} ; Default value: false
 
  ;; Favorites to list on the left sidebar
- :favorites ["Contents" "计算机" "框架"]
+ :favorites ["计算机" "框架" "Contents"]
 
  ;; Set flashcards interval.
  ;; Expected value:
