@@ -6,4 +6,6 @@
 	- Serial Old收集器
 	- CMS收集器
 	- Garbage First收集器
-	-
+	- Shenandoah收集器
+	- ZGC收集器
+	- Epsilon收集器
