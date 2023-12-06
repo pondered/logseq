@@ -29,7 +29,7 @@ alias:: Java虚拟机
 	- 类装载子系统 ((65709345-70bf-4b72-975a-ce2ed65ddd5e))
 - 类加载
   id:: 65709345-70bf-4b72-975a-ce2ed65ddd5e
-	- ![](https://images2018.cnblogs.com/blog/1414336/201807/1414336-20180703000717864-1624915027.png)
+	- ![image.png](../assets/image_1701877523243_0.png) ![](https://images2018.cnblogs.com/blog/1414336/201807/1414336-20180703000717864-1624915027.png){:height 316, :width 704}
 	- 双亲委派
 	- 类加载过程
 		- 加载
