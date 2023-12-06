@@ -26,7 +26,9 @@ alias:: Java虚拟机
 			- 方法数据
 			- 方法代码
 	- 字节码执行引擎
-	- 类装载子系统
+	- 类装载子系统logseq://graph/logseq?block-id=65709345-70bf-4b72-975a-ce2ed65ddd5e
+- 类加载机制
+  id:: 65709345-70bf-4b72-975a-ce2ed65ddd5e
 - 垃圾收集器
 	- Serial收集器
 	- ParNew收集器
