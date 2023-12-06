@@ -1,3 +1,5 @@
+alias:: Vue
+
 - 源码
 	- runtime-dom
 	- runtime-core
