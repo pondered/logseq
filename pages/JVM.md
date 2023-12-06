@@ -1,5 +1,7 @@
 - 内存管理模型
 	- ![image.png](../assets/image_1701787772981_0.png){:height 318, :width 445}
+	- 运行时数据区
+	-
 - 垃圾收集器
 	- Serial收集器
 	- ParNew收集器
