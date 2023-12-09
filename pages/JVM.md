@@ -31,7 +31,6 @@ alias:: Java虚拟机
 - 类加载
   id:: 65709345-70bf-4b72-975a-ce2ed65ddd5e
 	- ![类加载流程](../assets/image_1701877523243_0.png)
-	- 双亲委派
 	- 类加载过程
 	  collapsed:: true
 		- 加载
@@ -100,6 +99,7 @@ alias:: Java虚拟机
 				- 接口中不能使用静态语句块，但仍然有类变量`final static`初始化的赋值操作，因此接口与类一样会生成`<clinit>()`方法
 				- 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确的加锁和同步
 	- 类加载器
+	  collapsed:: true
 		- Bootstrap ClassLoader
 			- 加载核心类库,也就是`rt.jar`、`resources.jar`、`charsets.jar`等
 			- 可以通过 `-Xbootclasspath` 指定加载目录
@@ -111,7 +111,9 @@ alias:: Java虚拟机
 			- alias::  SystemClassLoader
 			- 默认加载器，一般加载 `classpath` 下的其他所有jar包和`.class`文件
 		- Custom ClassLoader
-			-
+			- 自定义加载器
+	- 双亲委派
+		-
 - 垃圾收集器
   collapsed:: true
 	- Serial收集器
