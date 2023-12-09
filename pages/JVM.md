@@ -106,8 +106,9 @@ alias:: Java虚拟机
 		- Extension ClassLoader
 			- 扩展类加载器，用于加载`lib/ext`目录下的 jar 和`.class`文件
 			- 通过设置系统变量 `java.ext.dirs` 指定加载目录
-			-
-		- APP ClassLoader
+			- 继承自 `URLClassLoader`
+		- APP ClassLoader alias:: SystemClassLoader
+			- 默认加载器,
 		- Custom ClassLoader
 - 垃圾收集器
   collapsed:: true
