@@ -102,8 +102,11 @@ alias:: Java虚拟机
 	- 类加载器
 		- Bootstrap ClassLoader
 			- 加载核心类库,也就是`rt.jar`、`resources.jar`、`charsets.jar`等
+			- 可以通过 `-Xbootclasspath` 指定加载目录
 		- Extension ClassLoader
 			- 扩展类加载器，用于加载`lib/ext`目录下的 jar 和`.class`文件
+			- 通过设置系统变量 `java.ext.dirs` 指定加载目录
+			-
 		- APP ClassLoader
 		- Custom ClassLoader
 - 垃圾收集器
