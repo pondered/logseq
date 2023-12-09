@@ -103,7 +103,7 @@ alias:: Java虚拟机
 		- Bootstrap ClassLoader
 			- 加载核心类库,也就是`rt.jar`、`resources.jar`、`charsets.jar`等
 		- Extension ClassLoader
-			- 扩展类加载器，用于加载`lib/ext`
+			- 扩展类加载器，用于加载`lib/ext`目录下的 jar 和`.class`文件
 		- APP ClassLoader
 		- Custom ClassLoader
 - 垃圾收集器
