@@ -1,6 +1,7 @@
 alias:: Java虚拟机
 
 - 内存模型
+  collapsed:: true
 	- ![JVM内存模型](../assets/image_1701787772981_0.png){:height 318, :width 445}
 	- 运行时数据区
 		- 程序计数器
@@ -32,6 +33,7 @@ alias:: Java虚拟机
 	- ![类加载流程](../assets/image_1701877523243_0.png)
 	- 双亲委派
 	- 类加载过程
+	  collapsed:: true
 		- 加载
 		  collapsed:: true
 			- 加载外部`.class`文件，加载到Java方法区内
@@ -97,7 +99,13 @@ alias:: Java虚拟机
 				- `<clinit>()`方法对于类或接口来说并不是必须的
 				- 接口中不能使用静态语句块，但仍然有类变量`final static`初始化的赋值操作，因此接口与类一样会生成`<clinit>()`方法
 				- 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确的加锁和同步
+	- 类加载器
+		- Bootstrap ClassLoader
+		- Extension ClassLoader
+		- APP ClassLoader
+		- Custom ClassLoader
 - 垃圾收集器
+  collapsed:: true
 	- Serial收集器
 	- ParNew收集器
 	- Parallel Scavenge收集器
