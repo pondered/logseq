@@ -70,7 +70,9 @@ alias:: Java虚拟机
 			- 整个阶段就是执行 `<clinit>()`方法的过程
 			- `<clinit>()`中的方法是**编译器**自动收集所有类变量的赋值动作和静态语句块`static{}`块并按顺序合并生成的
 			- 虚拟机必须开始初始化的情况
-				- 遇到 `new`（生成对象）、`getstatic`、`putstatic`（使用静态变量）、`invoke static`()这4条指令时
+				- 遇到 `new`（生成对象）、`getstatic`、`putstatic`（使用静态变量）、`invoke static`(调用静态方法)这4条指令时
+				- 使用`java.lang.reflect`包的方法对类进行反射调用。如果类没有初始化，需要触发初始化
+				-
 			- `<clinit>()`方法的执行规则
 				-
 - 垃圾收集器
