@@ -101,7 +101,9 @@ alias:: Java虚拟机
 				- 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确的加锁和同步
 	- 类加载器
 		- Bootstrap ClassLoader
+			- 加载核心类库,也就是`rt.jar`、`resources.jar`、`charsets.jar`等
 		- Extension ClassLoader
+			- 扩展类加载器，用于加载`lib/ext`
 		- APP ClassLoader
 		- Custom ClassLoader
 - 垃圾收集器
