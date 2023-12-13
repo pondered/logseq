@@ -99,7 +99,6 @@ alias:: Java虚拟机
 				- 接口中不能使用静态语句块，但仍然有类变量`final static`初始化的赋值操作，因此接口与类一样会生成`<clinit>()`方法
 				- 虚拟机会保证一个类的`<clinit>()`方法在多线程环境中被正确的加锁和同步
 	- 类加载器
-	  collapsed:: true
 		- Bootstrap ClassLoader
 			- 加载核心类库,也就是`rt.jar`、`resources.jar`、`charsets.jar`等
 			- 可以通过 `-Xbootclasspath` 指定加载目录
