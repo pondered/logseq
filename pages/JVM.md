@@ -116,9 +116,12 @@ alias:: Java虚拟机
 	  collapsed:: true
 		-
 - 垃圾收集器
-  collapsed:: true
 	- Serial收集器
+		- 年轻带垃圾收集器
+		- 只有一个线程处理GC，并且在垃圾回收的过程中暂停一切用户线程
+		-
 	- ParNew收集器
+		- 年轻带垃圾收集器
 	- Parallel Scavenge收集器
 	- Serial Old收集器
 	- CMS收集器
