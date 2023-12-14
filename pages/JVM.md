@@ -126,7 +126,8 @@ alias:: Java虚拟机
 	- Parallel Scavenge收集器
 		- 年轻代垃圾收集器
 		- 和 ParNew 的区别是
-			- Parallel Scaveng： 追求CPU吞吐量
+			- Parallel Scaveng： 追求CPU吞吐量，能够在较短时间内完成指定任务，适合没有交互的后台计算、弱交互计算
+			- ParNew：
 	- Serial Old收集器
 	- CMS收集器
 	- Garbage First收集器
