@@ -117,12 +117,16 @@ alias:: Java虚拟机
 		-
 - 垃圾收集器
 	- Serial收集器
-		- 年轻带垃圾收集器
+		- 年轻代垃圾收集器
 		- 只有一个线程处理GC，并且在垃圾回收的过程中暂停一切用户线程
-		-
+		- 使用的资源少，也更轻量级
 	- ParNew收集器
-		- 年轻带垃圾收集器
+		- 年轻代垃圾收集器
+		- 是 Serial 的多线程版本
 	- Parallel Scavenge收集器
+		- 年轻代垃圾收集器
+		- 和 ParNew 的区别是
+			-
 	- Serial Old收集器
 	- CMS收集器
 	- Garbage First收集器
