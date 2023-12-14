@@ -126,3 +126,5 @@ alias:: Java虚拟机
 	- Shenandoah收集器
 	- ZGC收集器
 	- Epsilon收集器
+- 垃圾回收算法
+	-
