@@ -126,7 +126,7 @@ alias:: Java虚拟机
 	- Parallel Scavenge收集器
 		- 年轻代垃圾收集器
 		- 和 ParNew 的区别是
-			-
+			- Parallel Scaveng： 追求CPU吞吐量
 	- Serial Old收集器
 	- CMS收集器
 	- Garbage First收集器
