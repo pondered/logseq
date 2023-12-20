@@ -5,6 +5,7 @@
 	- GC
 - 字节码
 - 多线程 & 并发
+	- [[Java/多线程]]
 - 类库
 	- 集合
 		- HashMap
@@ -13,5 +14,6 @@
 		- LinkedHashMap
 		- HashSet
 		- ArrayList
-		-
+		- LinkedList
+		- Vector
 -
