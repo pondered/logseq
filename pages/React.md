@@ -1,6 +1,6 @@
 - 生命周期
 	- ![React生命周期函数](../assets/image_1702298230741_0.png)
--
+	- Fiber
 - React Hooks
 	- 工作原理
 		-
