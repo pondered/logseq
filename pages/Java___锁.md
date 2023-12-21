@@ -1,2 +1,5 @@
 - volatile
+- synchronized
+- CAS
+- ReentrantLock
 -
