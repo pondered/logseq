@@ -32,4 +32,5 @@
 			- 在Mybatis中，要执行一条SQL语句，会设计很多的组件，核心的有：`Executor`、`StatementHandler`、`ParameterHandler`和`ResultSetHandler`
 			- `Executor` 会调用事务管理模块实现事务的相关控制，同时会通过缓存模块管理一级缓存和二级缓存
 			- SQL语句的真正执行将会由`StatementHandler`实现
+				- `StatementHandler` 会先依赖 `ParameterHandler` 进行 SQL 模版的实参绑定，然后由``
 	- 接口层
