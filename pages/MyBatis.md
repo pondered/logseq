@@ -37,4 +37,4 @@
 		- 插件
 			- 提供扩展能力，用来改变 MyBatis 的默认行为
 	- 接口层
-		- 暴露给
+		- 暴露给调用的接口集合，这些接口都是使用 MyBatis 时最长的一些接口，比如：`SqlSession接口`、`SqlSessionFactory接口`等，其中可以通过最核心的是`SqlSession接口`
