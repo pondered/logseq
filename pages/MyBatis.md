@@ -9,7 +9,7 @@
 		- 日志模块
 			- 用于集成第三方日志框架，可以集成`Log4j`、`Log4j2`、`Slf4j`
 		- Binding模块
-			-
+			- 通过 SqlSession 获取 Mapper 的
 		- 数据源模块
 		- 缓存模块
 		- 解析器模块
