@@ -29,5 +29,6 @@
 		- scripting
 			- 负责动态生成 SQL 的核心模块。会根据运行时用户传入的实参，解析动态 SQL 中的标签，并形成 SQL 模版，然后处理 SQL 模版中的占位符，用运行时的实参填充占位符，得到数据库真正可执行的 SQL 语句
 		- SQL执行
-			- 在Mybatis中，要执行一条SQL语句，会设计很多的组件，核心的有：`Executor`、``、、、
+			- 在Mybatis中，要执行一条SQL语句，会设计很多的组件，核心的有：`Executor`、`StatementHandler`、`ParameterHandler`和`ResultSetHandler`
+			- 其中 `Executor` 会调用事务管理模块实现事务的相关控制
 	- 接口层
