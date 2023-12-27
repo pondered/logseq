@@ -10,7 +10,7 @@
 			- 用于集成第三方日志框架，可以集成`Log4j`、`Log4j2`、`Slf4j`
 		- 反射工具模块
 			- 在 Java 反射的基础上进行一层封装，为上层使用方法提供更加灵活、方便的 API 接口，同时缓存 Java 的原生反射相关的元数据，提升了反射代码执行的效率，优化了反射操作的性能
-			- 代码位于 `org.apache`
+			- 代码位于 `org.apache.ibatis.reflection` 包中
 		- Binding 模块
 			- 通过 SqlSession 获取 Mapper 接口的代理，通过这个代理执行关联 Mapper.xml 文件中的数据库操作。通过这种方式可以将一些错误提前到编译期
 		- 数据源模块
