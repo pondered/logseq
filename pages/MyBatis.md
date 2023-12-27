@@ -11,6 +11,7 @@
 		- 反射工具模块
 			- 在 Java 反射的基础上进行一层封装，为上层使用方法提供更加灵活、方便的 API 接口，同时缓存 Java 的原生反射相关的元数据，提升了反射代码执行的效率，优化了反射操作的性能
 			- 代码位于 `org.apache.ibatis.reflection` 包中
+				- `Reflector` 是反射模块的基础。 要使用反射模块操作一个 Class，都会先将该 Class 封装成一个 Reflector 对象，在 Reflector中缓存 Class
 		- Binding 模块
 			- 通过 SqlSession 获取 Mapper 接口的代理，通过这个代理执行关联 Mapper.xml 文件中的数据库操作。通过这种方式可以将一些错误提前到编译期
 		- 数据源模块
