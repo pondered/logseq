@@ -1,7 +1,6 @@
 - 架构
 	- ![Mybatis 三层架构](../assets/image_1703605464268_0.png)
 	- 基础支撑层
-	  collapsed:: true
 		- 类型转换模块
 			- ![类型转换模块](../assets/image_1703645698557_0.png)
 			- 通过配置 `<typeAliase>` 标签为一个类定义一个别名
@@ -11,6 +10,7 @@
 			- 用于集成第三方日志框架，可以集成`Log4j`、`Log4j2`、`Slf4j`
 		- 反射工具模块
 			- 在 Java 反射的基础上进行一层封装，为上层使用方法提供更加灵活、方便的 API 接口，同时缓存 Java 的原生反射相关的元数据，提升了反射代码执行的效率，优化了反射操作的性能
+			- 代码位于 `org.apache`
 		- Binding 模块
 			- 通过 SqlSession 获取 Mapper 接口的代理，通过这个代理执行关联 Mapper.xml 文件中的数据库操作。通过这种方式可以将一些错误提前到编译期
 		- 数据源模块
@@ -28,13 +28,13 @@
 			- MyBatis 提供的的标签可根据实际的运行条件动态生成实际执行的 SQL 语句。如`<where>`、`<if>`、`<foreach>`、`<set>`
 		- scripting
 			- 负责动态生成 SQL 的核心模块。会根据运行时用户传入的实参，解析动态 SQL 中的标签，并形成 SQL 模版，然后处理 SQL 模版中的占位符，用运行时的实参填充占位符，得到数据库真正可执行的 SQL 语句
-		- SQL执行
-			- 在Mybatis中，要执行一条SQL语句，会设计很多的组件，核心的有：`Executor`、`StatementHandler`、`ParameterHandler`和`ResultSetHandler`
+		- SQL 执行
+			- 在 Mybatis 中，要执行一条 SQL 语句，会设计很多的组件，核心的有：`Executor`、`StatementHandler`、`ParameterHandler`和`ResultSetHandler`
 			- `Executor` 会调用事务管理模块实现事务的相关控制，同时会通过缓存模块管理一级缓存和二级缓存
-			- SQL语句的真正执行将会由`StatementHandler`实现
+			- SQL 语句的真正执行将会由`StatementHandler`实现
 				- `StatementHandler` 会先依赖 `ParameterHandler` 进行 SQL 模版的实参绑定，然后由`java.sql.Statement`对象将 SQL 语句以及绑定好的实参传到数据库执行，从数据库中拿到`ResultSet`，最后由`ResultSetHandler`将`ResultSet`映射成 Java 对象返回给调用方
-				- ![SQL执行核心过程](../assets/image_1703669624947_0.png)
+				- ![SQL 执行核心过程](../assets/image_1703669624947_0.png)
 		- 插件
 			- 提供扩展能力，用来改变 MyBatis 的默认行为
 	- 接口层
-		- 暴露给调用的接口集合，这些接口都是使用 MyBatis 时最长的一些接口，比如：`SqlSession接口`、`SqlSessionFactory接口`等，其中可以通过`SqlSession接口`实现很多功能也是最核心的接口，如：获取 Mapper 代理、执行SQL语句、控制事务开关
+		- 暴露给调用的接口集合，这些接口都是使用 MyBatis 时最长的一些接口，比如：`SqlSession 接口`、`SqlSessionFactory 接口`等，其中可以通过`SqlSession 接口`实现很多功能也是最核心的接口，如：获取 Mapper 代理、执行 SQL 语句、控制事务开关
