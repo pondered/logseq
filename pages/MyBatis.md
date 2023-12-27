@@ -33,5 +33,5 @@
 			- `Executor` 会调用事务管理模块实现事务的相关控制，同时会通过缓存模块管理一级缓存和二级缓存
 			- SQL语句的真正执行将会由`StatementHandler`实现
 				- `StatementHandler` 会先依赖 `ParameterHandler` 进行 SQL 模版的实参绑定，然后由`java.sql.Statement`对象将 SQL 语句以及绑定好的实参传到数据库执行，从数据库中拿到`ResultSet`，最后由`ResultSetHandler`将`ResultSet`映射成 Java 对象返回给调用方
-				- ![SQLvix; ](../assets/image_1703669624947_0.png)
+				- ![SQL执行核心过程](../assets/image_1703669624947_0.png)
 	- 接口层
