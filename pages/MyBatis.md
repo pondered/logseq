@@ -17,4 +17,4 @@
 		- 缓存模块
 			- ![缓存模块工作原理](../assets/image_1703648459036_0.png)
 		- 解析器模块
-			- Mybatis 中有两大部分配置文件需要进行解析，一个是`mybatis-config.xml`配置文件，还有一个是`*Mapper.xml`文件。一般情况下，
+			- Mybatis 中有两大部分配置文件需要进行解析，一个是`mybatis-config.xml`配置文件，还有一个是`*Mapper.xml`文件。这两个文件都是有解析器模块进行解析的，其中主要是依赖 `XPath` 实现 `xml` 配置文件以及各类表达式的解析
