@@ -2,11 +2,26 @@
 	- [[Spring Framework]]
 	- [[Disruptor]]
 	- [[MyBatis]]
-	-
 - [[JVM]]
 	- GC
 - 字节码
 - 多线程 & 并发
+	- 线程基础
+		- 状态
+			- `NEW` 新建
+			- `Runnable`(可运行)
+			- `Blocked`(被阻塞)
+			- `Waiting`(等待)
+			- `Time Waiting`(计时等待)
+			  `Terminated`(被终止)
+	- 阻塞队列
+	- 原子类
+	- ThreadLocal
+	- Future
+	- CAS
+	- 死锁
+	- final
+	- AQS
 	- [[Java/多线程]]
 	- [[Java/锁]]
 - 性能优化
