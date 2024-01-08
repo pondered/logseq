@@ -37,7 +37,8 @@
 				  ```
 		- `CachedThreadPool`：常驻核心线程数为0，所有的线程都是临时创建
 			- 最大线程为`Integer.MAX_VALUE`，意味着线程数几乎可以无限增加
-			- 因为线程都是临时线程，所以都会被销毁，这里的空闲线程销毁时间是 60秒，就是当60秒内没有任务执行
+			- 因为线程都是临时线程，所以都会被销毁，这里的空闲线程销毁时间是 60秒，就是当60秒内没有任务执行则销毁这个线程
+			- 使用了`SynchronousQueue`的一个阻塞队列来存储任务，这个队列是无法存储的，因为容量为0，只负责对任务的传递和中转
 			- 实现代码`Executors#newCachedThreadPool()`中，如下：
 				- ```java
 				  public static ExecutorService newCachedThreadPool() {
@@ -53,7 +54,19 @@
 				                                    threadFactory);
 				  }
 				  ```
-		- `ScheduledThreadPool`：
+		- `ScheduledThreadPool`：支持定时或周期性执行任务
+			- 实现代码`Executors#newScheduledThreadPool(int)`中，如下：
+				- ```java
+				  public static ScheduledExecutorService newScheduledThreadPool(int corePoolSize) {
+				      return new ScheduledThreadPoolExecutor(corePoolSize);
+				  }
+				  
+				  public static ScheduledExecutorService newScheduledThreadPool(
+				          int corePoolSize, ThreadFactory threadFactory) {
+				      return new ScheduledThreadPoolExecutor(corePoolSize, threadFactory);
+				  }
+				  ```
+				- 这里调用了`ScheduledThreadPoolExecutor`的构造函数，这个类继承了`ThreadPoolExecutor`，同时实现了`ScheduledExecutorService`接口
 		- `SingleThreadExecutor`：核心线程数和最大线程数均为1，不管任务多少，只会有唯一的一个线程去执行
 			- 如果线程在执行过程中发生了异常，线程池会重新创建一个线程来执行后续的任务
 			- 非常适合所有任务都需要按被提交的顺序来执行的场景，是个单线程的串行
@@ -74,8 +87,15 @@
 				                                  threadFactory));
 				  }
 				  ```
-		- `SingleThreadScheduledExecutor`：
-		- `ForkJoinPool`：
+		- `SingleThreadScheduledExecutor`：和`ScheduledThreadPool`非常相似，只是`ScheduledThreadPool`的一个特列，内部只有一个线程，只是将`ScheduledThreadPool`的核心线程数设置为了1
+			- 实现代码`Executors#newSingleThreadScheduleExecutor()`中，如下：
+				- ```java
+				  public static ScheduledExecutorService newSingleThreadScheduledExecutor() {
+				      return new DelegatedScheduledExecutorService
+				          (new ScheduledThreadPoolExecutor(1));
+				  }
+				  ```
+		- `ForkJoinPool`：是`JDK7`中引入的新的线程池，可以充分利用多核CPU，可以把一个任务拆分为多个子任务，这些子任务放在不同的处理器上并执行，当这些子任务执行结束后在把这些结果合并起来
 	- 底层实现
 		- ThreadPoolExecutor
 	- 线程池状态
